@@ -1,10 +1,18 @@
 {
   "manifest_version": 3,
-  "name": "Hello Extensions",
-  "description": "Base Level Extension",
+  "name": "Dyslexfont",
+  "description": "Extension which provides fonts for people with dyslexia",
   "version": "1.0",
   "action": {
     "default_popup": "gui/popup.html",
     "default_icon": "images/favicon.png"
-  }
+  },
+  "content_scripts": [
+      {
+        "js": ["scripts/content.js"],
+        "matches": [
+          "<all_urls>"
+        ]
+      }
+    ]
 }
